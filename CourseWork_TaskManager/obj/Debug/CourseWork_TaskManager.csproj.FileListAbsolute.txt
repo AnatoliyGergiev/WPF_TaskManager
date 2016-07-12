@@ -1,0 +1,13 @@
+c:\users\анатолий\documents\visual studio 2013\Projects\CourseWork_TaskManager\CourseWork_TaskManager\bin\Debug\CourseWork_TaskManager.exe.config
+C:\Users\Анатолий\Documents\Visual Studio 2013\Projects\CourseWork_TaskManager\CourseWork_TaskManager\bin\Debug\CourseWork_TaskManager.exe
+C:\Users\Анатолий\Documents\Visual Studio 2013\Projects\CourseWork_TaskManager\CourseWork_TaskManager\bin\Debug\CourseWork_TaskManager.pdb
+C:\Users\Анатолий\Documents\Visual Studio 2013\Projects\CourseWork_TaskManager\CourseWork_TaskManager\obj\Debug\CourseWork_TaskManager.csprojResolveAssemblyReference.cache
+C:\Users\Анатолий\Documents\Visual Studio 2013\Projects\CourseWork_TaskManager\CourseWork_TaskManager\obj\Debug\Views\MainWindow.baml
+C:\Users\Анатолий\Documents\Visual Studio 2013\Projects\CourseWork_TaskManager\CourseWork_TaskManager\obj\Debug\Views\MainWindow.g.cs
+C:\Users\Анатолий\Documents\Visual Studio 2013\Projects\CourseWork_TaskManager\CourseWork_TaskManager\obj\Debug\App.g.cs
+C:\Users\Анатолий\Documents\Visual Studio 2013\Projects\CourseWork_TaskManager\CourseWork_TaskManager\obj\Debug\CourseWork_TaskManager_MarkupCompile.cache
+C:\Users\Анатолий\Documents\Visual Studio 2013\Projects\CourseWork_TaskManager\CourseWork_TaskManager\obj\Debug\CourseWork_TaskManager.g.resources
+C:\Users\Анатолий\Documents\Visual Studio 2013\Projects\CourseWork_TaskManager\CourseWork_TaskManager\obj\Debug\CourseWork_TaskManager.Properties.Resources.resources
+C:\Users\Анатолий\Documents\Visual Studio 2013\Projects\CourseWork_TaskManager\CourseWork_TaskManager\obj\Debug\CourseWork_TaskManager.csproj.GenerateResource.Cache
+C:\Users\Анатолий\Documents\Visual Studio 2013\Projects\CourseWork_TaskManager\CourseWork_TaskManager\obj\Debug\CourseWork_TaskManager.exe
+C:\Users\Анатолий\Documents\Visual Studio 2013\Projects\CourseWork_TaskManager\CourseWork_TaskManager\obj\Debug\CourseWork_TaskManager.pdb
