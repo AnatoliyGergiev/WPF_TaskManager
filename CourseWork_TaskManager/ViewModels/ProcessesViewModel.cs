@@ -12,9 +12,70 @@ namespace CourseWork_TaskManager.ViewModels
 {
     class ProcessesViewModel : Notifier, IProcessesViewModel
     {
+        private ICommand killCommand;
+
+        private ICommand toggleExecuteCommand { get; set; }
+
+        private bool canExecute = true;
+
+        public bool CanExecute
+        {
+            get
+            {
+                return this.canExecute;
+            }
+
+            set
+            {
+                if (this.canExecute == value)
+                {
+                    return;
+                }
+
+                this.canExecute = value;
+            }
+        }
+
+        public ICommand ToggleExecuteCommand
+        {
+            get
+            {
+                return toggleExecuteCommand;
+            }
+            set
+            {
+                toggleExecuteCommand = value;
+            }
+        }
+
+        public ICommand KillCommand
+        {
+            get
+            {
+                return killCommand;
+            }
+            set
+            {
+                killCommand = value;
+            }
+        }
+
+    
+        public void ShowMessage(object obj)
+        {
+            _model.KillProcess(obj);
+        }
+
+        public void ChangeCanExecute(object obj)
+        {
+            canExecute = !canExecute;
+        }
+        
+        
+        
         private readonly IProcessesModel _model;
         private readonly ICommand _updateCommand;
-        private readonly ICommand _killCommand;
+        //private readonly ICommand _killCommand;
 
 
         public ObservableCollection<Proc>
@@ -25,10 +86,10 @@ namespace CourseWork_TaskManager.ViewModels
         {
             get { return _updateCommand; }
         }
-        public ICommand KillCommand
-        {
-            get { return _killCommand; }
-        }
+        //public ICommand KillCommand
+        //{
+        //    get { return _killCommand; }
+        //}
 
         public ProcessesViewModel(IProcessesModel processModel)
         {
@@ -36,7 +97,10 @@ namespace CourseWork_TaskManager.ViewModels
             _model.ProcessesUpdated +=
                 model_ProcessesUpdated;
             _updateCommand = new UpdateCommand(this);
-            _killCommand = new KillCommand(this);
+            //_killCommand = new KillCommand(this);
+            KillCommand = new RelayCommand(ShowMessage, param => this.canExecute);
+            toggleExecuteCommand = new RelayCommand(ChangeCanExecute);
+
         }
 
         private void model_ProcessesUpdated(object sender,
@@ -49,9 +113,9 @@ namespace CourseWork_TaskManager.ViewModels
         {
             _model.UpdateProcesses();
         }
-        public void KillProcess(Proc pr)
-        {
-            _model.KillProcess(pr);
-        }
+        //public void KillProcess(Proc pr)
+        //{
+        //    _model.KillProcess(pr);
+        //}
     }
 }

@@ -23,14 +23,13 @@ namespace CourseWork_TaskManager.Models
         ObservableCollection<Proc> Processes { get; set; }
         event EventHandler ProcessesUpdated;
         void UpdateProcesses();
-        void KillProcess(Proc pr);
+        void KillProcess(Object pr);
     }
     
     public class ProcessesModel : IProcessesModel
     {
         public ObservableCollection<Proc> Processes { get; set; }
         public event EventHandler ProcessesUpdated = delegate { };
-
         public ProcessesModel()
         {
             Processes = new ObservableCollection<Proc>();
@@ -49,9 +48,11 @@ namespace CourseWork_TaskManager.Models
             }
             ProcessesUpdated(this,EventArgs.Empty);
         }
-        public void KillProcess(Proc pr)
+        public void KillProcess(Object pr)
         {
-            Process.GetProcessById(pr.Id).Kill();
+            //int id = Processes[Convert.ToInt32(pr)].Id;
+            //Process.GetProcessesByName("Calc")[0].Kill();
+            Process.GetProcessById(((Proc)pr).Id).Kill();
         }
 
     }

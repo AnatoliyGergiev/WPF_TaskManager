@@ -10,6 +10,6 @@ namespace CourseWork_TaskManager.ViewModels
     public interface IProcessesViewModel
     {
         void UpdateProcesses();
-        void KillProcess(Proc pr);
+        //void KillProcess(Proc pr);
     }
 }

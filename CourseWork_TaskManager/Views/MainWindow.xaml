@@ -5,7 +5,7 @@
     <Grid>
         <TabControl Name="tabControl1" Margin="0,0,0.4,46.8" >
             <TabItem Header="Приложения">
-            <DataGrid ItemsSource="{Binding Processes}" MouseUp="DataGrid_MouseUp"/>
+            <DataGrid Name="dataGrid_Processes" ItemsSource="{Binding Processes}" MouseUp="DataGrid_MouseUp"/>
 
 
                 <!--<Grid Margin="0,33,-0.2,-0.4">
@@ -41,7 +41,7 @@
                 <ImageBrush ImageSource="../Images/refresh.png" />
             </Button.Background>
         </Button>
-        <Button Name="Kill_button" Content="Завершить" HorizontalAlignment="Left" Margin="433,288,0,0" VerticalAlignment="Top" Width="75" Height="23" IsEnabled="False" Command="{Binding KillCommand}"/>
+        <Button Name="Kill_button" Content="Завершить" HorizontalAlignment="Left" Margin="433,288,0,0" VerticalAlignment="Top" Width="75" Height="23" IsEnabled="False" Command="{Binding KillCommand}" CommandParameter="{Binding ElementName=dataGrid_Processes, Path=SelectedItem}"/>
 
     </Grid>
 </Window>

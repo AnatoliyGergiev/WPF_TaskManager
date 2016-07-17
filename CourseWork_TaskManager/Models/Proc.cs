@@ -21,7 +21,7 @@ namespace CourseWork_TaskManager.Models
             try
             {
                 StartTime = pr.StartTime;
-            }catch(Exception ex)
+            }catch(Exception )
             { StartTime = Convert.ToDateTime("01.01.1970"); }
         }
     }
