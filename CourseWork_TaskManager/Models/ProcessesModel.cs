@@ -52,7 +52,8 @@ namespace CourseWork_TaskManager.Models
         {
             //int id = Processes[Convert.ToInt32(pr)].Id;
             //Process.GetProcessesByName("Calc")[0].Kill();
-            Process.GetProcessById(((Proc)pr).Id).Kill();
+            if (pr!=null)
+                Process.GetProcessById(((Proc)pr).Id).Kill();
         }
 
     }
